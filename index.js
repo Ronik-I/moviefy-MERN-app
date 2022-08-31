@@ -19,7 +19,7 @@ app.use("/user", UserRoute);
 
 const connectDb = async () => {
   try {
-    const conn = await mongoose.connect(process.env.MONGO_URL, {
+      mongoose.connect(process.env.MONGO_URL, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
