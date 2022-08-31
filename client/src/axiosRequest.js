@@ -6,7 +6,7 @@ export const publicRequest = axios.create({
     baseURL: baseUrl
 })
 
-const userRequestbaseUrl = 'moviefy1.herokuapp.com'
+const userRequestbaseUrl = ''
 
 export const userPublicRequest = axios.create({
     baseURL: userRequestbaseUrl,
