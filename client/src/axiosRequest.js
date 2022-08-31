@@ -6,7 +6,7 @@ export const publicRequest = axios.create({
     baseURL: baseUrl
 })
 
-const userRequestbaseUrl = 'http://localhost:8800/'
+const userRequestbaseUrl = 'moviefy1.herokuapp.com'
 
 export const userPublicRequest = axios.create({
     baseURL: userRequestbaseUrl,
