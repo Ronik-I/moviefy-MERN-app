@@ -33,6 +33,7 @@ connectDb();
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
+  console.log("i am here");
   app.get("*", (req, res) => {
     res.sendFile("/client/build");
   });
