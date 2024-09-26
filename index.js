@@ -19,17 +19,18 @@ app.use("/user", UserRoute);
 
 const connectDb = async () => {
   try {
-    const conn = mongoose.connect(process.env.MONGO_URL, {
+    const conn = await mongoose.connect(process.env.MONGO_URL, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
 
-    console.log(`MangoDb connected: ${conn.connection.host}`.cyan.underline);
+    console.log(`MongoDB connected: ${conn.connection.host}`.cyan.underline);
   } catch (error) {
     console.log(error);
   }
 };
 connectDb();
+
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
